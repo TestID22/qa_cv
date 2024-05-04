@@ -1,0 +1,1 @@
+Django learning with pythonanywhere deployment
