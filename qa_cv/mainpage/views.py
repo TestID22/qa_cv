@@ -7,4 +7,6 @@ def index(request):
                "context": ['Author', "not an Author"]
                }
     posts = Post.objects.all()
-    return render(request, "index.html",  context)
+    for post in posts:
+        print(post)
+    return render(request, "index.html", {"posts":posts})
