@@ -8,7 +8,26 @@
 	<link rel="stylesheet"  href="{% static "css/style.css" %}" />
 </head>
 <body>
-	<h1>vitalii</h1>
-		<p>Font Test</p>
+	<header>
+		<div class="logo">
+			<img id='levi' src="{% static "res/img/levi.jpg" %}" /><h3>LOGO</h3>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#git">GIT</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<body>
+		<div class="body_wrapper">
+			<ul class="posts_from_db">
+				{% for post in context %}
+				<li>{{ post }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</body>
 </body>
 </html>

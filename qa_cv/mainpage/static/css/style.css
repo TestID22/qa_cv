@@ -1,7 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Sedan+SC&display=swap');
-
+/*8bit font*/
 *{
     font-family: "Press Start 2P", system-ui;
     font-weight: 400;
     font-style: normal;
+
+}
+/*end of 8 bit font*/
+
+#levi{
+    width: 324px;
+    height: 78px;
+}
+
+
+/* Reset default margin and padding for UL */
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Style the navigation links */
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover{
+    color: yellow;
+;
+}
+
+nav ul li a:hover {
+    background-color: #000000;
+}
+
+/* Style the navigation bar */
+header {
+    background-color: #000000;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Optional: Style the logo */
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; /* Adjust height as needed */
+}
+
+/* Optional: Center the navigation */
+nav ul {
+    text-align: center;
+}
+
+/* Optional: Add spacing between navigation items */
+nav ul li {
+    margin-right: 20px;
+}
+
+/* Optional: Style active link */
+nav ul li a.active {
+    color: #007bff; /* Change this color as per your theme */
+    font-weight: bold;
+}
+
+.body_wrapper{
+    margin: auto;
+    width: 80%;
+}
+
+.posts_from_db li{
+   padding:15px;
 }
