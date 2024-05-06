@@ -79,17 +79,26 @@ nav ul li a.active {
     color: #007bff; /* Change this color as per your theme */
     font-weight: bold;
 }
+.outter{
 
+}
 .body_wrapper{
     margin: auto;
     width: 80%;
     display: flex;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    justify-content: center;
+    border: 2px solid;
 }
 .post_form{
-    width:
+    padding: 25px 20px 10px 1px
 }
 
-
+.posts_from_db {
+    padding: 10px;
+}
 .posts_from_db li{
    padding:15px;
 }
