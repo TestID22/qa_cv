@@ -1,12 +1,14 @@
 from django.views.generic import TemplateView
 from django.shortcuts import render
 from .models import Post
+from .forms import PostForm
 
 def index(request):
-    context = {
-               "context": ['Author', "not an Author"]
-               }
-    posts = Post.objects.all()
-    for post in posts:
-        print(post)
-    return render(request, "index.html", {"posts":posts})
+    posts = Post.objects.all().order_by('-id')
+    post = Post()
+    form = PostForm()
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        post.post = form.data['your_post']
+        post.save()
+    return render(request, "index.html", {"posts":posts, "form": form})

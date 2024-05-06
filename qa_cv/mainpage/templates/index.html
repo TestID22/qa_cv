@@ -21,7 +21,13 @@
 		</nav>
 	</header>
 	<body>
-		<div class="body_wrapper">
+	<div class="body_wrapper">
+		<div class="post_form">
+			<form action='' method="POST">{% csrf_token %}
+				{{ form }}
+				<button type="submit">Submit</button>
+			</form>
+		</div>
 			<ul class="posts_from_db">
 				{% for post in posts %}
 				<li>{{ post }}</li>
